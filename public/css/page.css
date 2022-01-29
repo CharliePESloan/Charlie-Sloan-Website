@@ -14,73 +14,18 @@ html, body {
 }
 * {
     box-sizing: inherit;
-}
 
-/* Sidebar */
-aside.sidebar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: var(--sidebar-width);
-    z-index: 100;
-
-    color: white;
-    background: #222;
-    opacity: 0.7;
-
-    transition: transform 1s;
-    transform: translateX(calc(calc(var(--sidebar-width) * -1) + var(--sidebar-icon-size)));
+    font-family: "Arial";
 }
-aside.sidebar.open {
-    transform: translateX(0);
+h1, h2, h3, h4 ,h5 {
+    /*font-family: "Arial";*/
+    font-weight: lighter;
 }
-aside.sidebar > button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: var(--sidebar-icon-size);
-    aspect-ratio: 1/1;
+h4 {
+    font-size: 17px;
 }
-aside.sidebar > .sidebar-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: var(--sidebar-icon-size);
-    height: var(--sidebar-icon-size);
-}
-aside.sidebar > nav {
-    position: absolute;
-    top: var(--sidebar-icon-size);
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-aside.sidebar > nav > .nav-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-    width: 100%;
-    height: var(--sidebar-icon-size);
-
-    color: white;
-}
-aside.sidebar > nav > .nav-item > .nav-item-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: var(--sidebar-icon-size);
+a {
+    color: inherit;
 }
 
 /* TODO: Offer no js version, add notification for people to select non js version save their choice in session variable, if adding accounts save their choice permanently  */
@@ -92,12 +37,12 @@ aside.sidebar > nav > .nav-item > .nav-item-icon {
 /* Header */
 header {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
 
     position: absolute;
     top: 0;
-    left: 0;
+    left: calc(var(--sidebar-icon-size) + 20px);
     right: 0;
     height: var(--header-height);
     /*padding-left: var(--sidebar-button-size);*/
